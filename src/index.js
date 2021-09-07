@@ -8,6 +8,7 @@ import { _ListItem } from "./components/ListItem";
 import { _Chart } from "./components/Chart";
 import { _Badge } from "./components/Badge";
 import { _Breadcrumb } from "./components/Breadcrumb";
+import { _BreadcrumbItem } from "./components/BreadcumbItem";
 
 Kapseli.plugins.add("basic-components-kapseli", (app, opts) => {
 
@@ -67,8 +68,10 @@ Kapseli.plugins.add("basic-components-kapseli", (app, opts) => {
         // Breadcrumb
         if("breadcrumb" in CONF.components){
                 let BREADCRUMB = _Breadcrumb(Component);
+                let BREADCRUMBITEM = _BreadcrumbItem(Component);
                 let b = new BREADCRUMB();
+                let bi = new BREADCRUMBITEM();
                 add_comp("BREADCRUMB", b);
-                
+                add_comp("BREADCRUMBITEM",bi);          
         }
 });
