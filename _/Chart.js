@@ -37,12 +37,3 @@ export class ChartComponent extends Component{
     }
 
 }
-
-
-
-
-
-
-
-
-

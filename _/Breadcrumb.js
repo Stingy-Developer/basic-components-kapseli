@@ -6,10 +6,10 @@ export class Breadcrumb extends Component{
             data:{
                 list: list !== undefined ? list : []
             },
-            template:`
+            template:(
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb" v-for="item in list">
-                    <li class="breadcrumb-item" v-if="list.length -1 != item.index"><a :href="item.value.href">
+                    <li class="breadcrumb-item" v-if="list.length -1 != item.index"><a href="item.value.href">
                     <data v-data="item.value.label"></data>
                     </a></li>
                     <li class="breadcrumb-item active" v-if="list.length -1 == item.index">
@@ -17,7 +17,7 @@ export class Breadcrumb extends Component{
                     </li>
                 </ol>
             </nav>
-            `,
+            ),
             methods:{
             },
             props:{
