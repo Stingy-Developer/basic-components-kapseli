@@ -17,7 +17,9 @@ Kapseli.plugins.add("basic-components-kapseli", (app, opts) => {
                 ...opts || {}
         }
 
-        let add_comp = app.View.addComponent;
+        const add_comp = (el,k) => {
+                app.View.addComponent(el,k);
+        }
         const Component = app.Component;
 
         // Button
